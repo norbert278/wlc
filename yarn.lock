@@ -207,6 +207,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/runtime@npm:7.25.7":
+  version: 7.25.7
+  resolution: "@babel/runtime@npm:7.25.7"
+  dependencies:
+    regenerator-runtime: "npm:^0.14.0"
+  checksum: 10c0/86b7829d2fc9343714a9afe92757cf96c4dc799006ca61d73cda62f4b9e29bfa1ce36794955bc6cb4c188f5b10db832c949339895e1bbe81a69022d9d578ce29
+  languageName: node
+  linkType: hard
+
 "@babel/template@npm:^7.25.9":
   version: 7.25.9
   resolution: "@babel/template@npm:7.25.9"
@@ -1656,6 +1665,39 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@tannin/compile@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "@tannin/compile@npm:1.1.0"
+  dependencies:
+    "@tannin/evaluate": "npm:^1.2.0"
+    "@tannin/postfix": "npm:^1.1.0"
+  checksum: 10c0/3dddaad1a3e152439ee595d53d309e4cd9c84bfc3e7afbecdbb8ab064337f4da56d2cc999c62588f189bbe4841d22a487070ba240a321287aab46223d6080f5d
+  languageName: node
+  linkType: hard
+
+"@tannin/evaluate@npm:^1.2.0":
+  version: 1.2.0
+  resolution: "@tannin/evaluate@npm:1.2.0"
+  checksum: 10c0/233116c3b55f06844a5d49b7fe3575c4e8bf29287a3d8b3729a46f9b000daa8f7826e4e8c8c220064ddcb16276d4d7ce12113115d8015533d93e5b52148b3a68
+  languageName: node
+  linkType: hard
+
+"@tannin/plural-forms@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "@tannin/plural-forms@npm:1.1.0"
+  dependencies:
+    "@tannin/compile": "npm:^1.1.0"
+  checksum: 10c0/bf318832e37c0f3b0cf9d25f962b78ded9a2c42b0fb2c23139531094a2b3c69c043e2f76bdfb2c386b8436d3d209ff17578b8c4f5566f27f1542135154a218f8
+  languageName: node
+  linkType: hard
+
+"@tannin/postfix@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "@tannin/postfix@npm:1.1.0"
+  checksum: 10c0/5a433b3ac9f30534c1e82c218d8f6558d960ebf822ad44dfcd6d7adad88d9800382de86913c5bcbe38c03252dc75ef233762036e0ac3a428e1a14df6bc8c6120
+  languageName: node
+  linkType: hard
+
 "@trysound/sax@npm:0.2.0":
   version: 0.2.0
   resolution: "@trysound/sax@npm:0.2.0"
@@ -1954,6 +1996,31 @@ __metadata:
     "@webassemblyjs/ast": "npm:1.14.1"
     "@xtuc/long": "npm:4.2.2"
   checksum: 10c0/8d7768608996a052545251e896eac079c98e0401842af8dd4de78fba8d90bd505efb6c537e909cd6dae96e09db3fa2e765a6f26492553a675da56e2db51f9d24
+  languageName: node
+  linkType: hard
+
+"@wordpress/hooks@npm:*":
+  version: 4.14.0
+  resolution: "@wordpress/hooks@npm:4.14.0"
+  dependencies:
+    "@babel/runtime": "npm:7.25.7"
+  checksum: 10c0/1da42ea0b7745706e475ef493e4257647640ea8b8b2cb61f6c9b9d14f9b9f2a48e6297c6617cfdca87df7acae9890243ffccbf3ee58cb405a0cf97b6081f1dc8
+  languageName: node
+  linkType: hard
+
+"@wordpress/i18n@npm:^5.14.0":
+  version: 5.14.0
+  resolution: "@wordpress/i18n@npm:5.14.0"
+  dependencies:
+    "@babel/runtime": "npm:7.25.7"
+    "@wordpress/hooks": "npm:*"
+    gettext-parser: "npm:^1.3.1"
+    memize: "npm:^2.1.0"
+    sprintf-js: "npm:^1.1.1"
+    tannin: "npm:^1.2.0"
+  bin:
+    pot-to-php: ./tools/pot-to-php.js
+  checksum: 10c0/bb221cd50e0b4c80bb4e9dac5e7de467d7f50030bc960dc628bd03ec3a8f21062b4fe7d64d7ec15a170b0df85dec659a400e99bfd10857f0d4bcc7518bd54071
   languageName: node
   linkType: hard
 
@@ -3462,7 +3529,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"encoding@npm:^0.1.13":
+"encoding@npm:^0.1.12, encoding@npm:^0.1.13":
   version: 0.1.13
   resolution: "encoding@npm:0.1.13"
   dependencies:
@@ -4077,6 +4144,16 @@ __metadata:
   version: 8.0.1
   resolution: "get-stream@npm:8.0.1"
   checksum: 10c0/5c2181e98202b9dae0bb4a849979291043e5892eb40312b47f0c22b9414fc9b28a3b6063d2375705eb24abc41ecf97894d9a51f64ff021511b504477b27b4290
+  languageName: node
+  linkType: hard
+
+"gettext-parser@npm:^1.3.1":
+  version: 1.4.0
+  resolution: "gettext-parser@npm:1.4.0"
+  dependencies:
+    encoding: "npm:^0.1.12"
+    safe-buffer: "npm:^5.1.1"
+  checksum: 10c0/c498f38346f5d8dce4731ee4577df4d7e349c808820542be8ccf706a6dae0c8e2cd18505d6cc574e108695963066d3d67d324b88630b3149f96b46078e6b9980
   languageName: node
   linkType: hard
 
@@ -4965,6 +5042,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"just-validate@npm:^4.3.0":
+  version: 4.3.0
+  resolution: "just-validate@npm:4.3.0"
+  checksum: 10c0/c13a13442a14e55581fead56d8e892e702ff848aa3b340b61cd013be2b327c20529ff658bab38a7637b255fbd0fdd0c0d03a0342a250f265957b4b55ee7f6be5
+  languageName: node
+  linkType: hard
+
 "lightningcss-darwin-arm64@npm:1.27.0":
   version: 1.27.0
   resolution: "lightningcss-darwin-arm64@npm:1.27.0"
@@ -5386,6 +5470,13 @@ __metadata:
     tree-dump: "npm:^1.0.1"
     tslib: "npm:^2.0.0"
   checksum: 10c0/9afcf2c491374ffcd12f57aaf4773d40b0372806824eed260280db2404987d949ce81887ec2ae1346b8e11b613f6553ceef57ef2f5eaf91f0762670ec43ee0de
+  languageName: node
+  linkType: hard
+
+"memize@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "memize@npm:2.1.0"
+  checksum: 10c0/31259bdc943a08e2cc6483ef60b53460050d131cd68302a1e550fe39bb46ebcf77a80103ca14fa4ec74eca2463bda81c3460b908427c246d7e72ac8c39debcd7
   languageName: node
   linkType: hard
 
@@ -7407,6 +7498,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"regenerator-runtime@npm:^0.14.0":
+  version: 0.14.1
+  resolution: "regenerator-runtime@npm:0.14.1"
+  checksum: 10c0/1b16eb2c4bceb1665c89de70dcb64126a22bc8eb958feef3cd68fe11ac6d2a4899b5cd1b80b0774c7c03591dc57d16631a7f69d2daa2ec98100e2f29f7ec4cc4
+  languageName: node
+  linkType: hard
+
 "remark-html@npm:16.0.1":
   version: 16.0.1
   resolution: "remark-html@npm:16.0.1"
@@ -7604,7 +7702,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"safe-buffer@npm:5.2.1":
+"safe-buffer@npm:5.2.1, safe-buffer@npm:^5.1.1":
   version: 5.2.1
   resolution: "safe-buffer@npm:5.2.1"
   checksum: 10c0/6501914237c0a86e9675d4e51d89ca3c21ffd6a31642efeba25ad65720bce6921c9e7e974e5be91a786b25aa058b5303285d3c15dbabf983a919f5f630d349f3
@@ -7639,6 +7737,8 @@ __metadata:
     "@roots/bud": "npm:6.24.0"
     "@roots/bud-tailwindcss": "npm:6.24.0"
     "@roots/sage": "npm:6.24.0"
+    "@wordpress/i18n": "npm:^5.14.0"
+    just-validate: "npm:^4.3.0"
   languageName: unknown
   linkType: soft
 
@@ -7996,7 +8096,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sprintf-js@npm:^1.1.3":
+"sprintf-js@npm:^1.1.1, sprintf-js@npm:^1.1.3":
   version: 1.1.3
   resolution: "sprintf-js@npm:1.1.3"
   checksum: 10c0/09270dc4f30d479e666aee820eacd9e464215cdff53848b443964202bf4051490538e5dd1b42e1a65cf7296916ca17640aebf63dae9812749c7542ee5f288dec
@@ -8254,6 +8354,15 @@ __metadata:
     tailwind: lib/cli.js
     tailwindcss: lib/cli.js
   checksum: 10c0/c6525be3dd26febc4ec5e45e80596bff8b48ade7de258c1ec8704297bf47c1ec7b2b186b13662ebaa6ab4795ad8879fb64064f796756bfc8b46558b542b01a6c
+  languageName: node
+  linkType: hard
+
+"tannin@npm:^1.2.0":
+  version: 1.2.0
+  resolution: "tannin@npm:1.2.0"
+  dependencies:
+    "@tannin/plural-forms": "npm:^1.1.0"
+  checksum: 10c0/1b960bf9ca49f279943dde0b303ca396c4bda816d58f6f43cc9fe79edd6e6e462ebd773d12e266cc0e64205085d01eb5ecf15a286e84668f484e4e99c113a20e
   languageName: node
   linkType: hard
 

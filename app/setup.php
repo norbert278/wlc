@@ -13,9 +13,15 @@ use function Roots\bundle;
  *
  * @return void
  */
-add_action('wp_enqueue_scripts', function () {
-    bundle('app')->enqueue();
-}, 100);
+add_action( 'wp_enqueue_scripts', function () {
+    bundle( 'app' )->enqueue()->localize(
+        'wlc',
+        [
+            'ajax_url'            => admin_url( 'admin-ajax.php' ),
+            'feedback_form_nonce' => wp_create_nonce( 'feedback_form_nonce' ),
+        ]
+    );
+}, 100 );
 
 /**
  * Register the theme assets with the block editor.

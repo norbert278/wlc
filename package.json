@@ -22,5 +22,9 @@
     "@roots/bud": "6.24.0",
     "@roots/bud-tailwindcss": "6.24.0",
     "@roots/sage": "6.24.0"
+  },
+  "dependencies": {
+    "@wordpress/i18n": "^5.14.0",
+    "just-validate": "^4.3.0"
   }
 }
