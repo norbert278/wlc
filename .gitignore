@@ -1,0 +1,13 @@
+
+/node_modules
+/vendor
+/public
+.env
+.gh-env
+.budfiles
+npm-debug.log
+yarn-error.log
+.yarn.lock
+/.idea
+/.yarn
+auth.json
