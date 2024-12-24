@@ -1,5 +1,6 @@
 import JustValidate from 'just-validate';
 import {__} from '@wordpress/i18n';
+import FeedbackResult from "@scripts/components/FeedbackResult.js";
 
 /**
  * Class representing a feedback form.
@@ -15,6 +16,8 @@ export default class FeedbackForm {
             this.initForm(form);
         });
 
+        // Initialize FeedbackResult to refresh results after form submission
+        this.feedbackResult = new FeedbackResult();
     }
 
     /**
@@ -76,6 +79,8 @@ export default class FeedbackForm {
 
                     form.reset();
 
+                    // Refresh the results after form submission
+                    this.feedbackResult.initResults(document.querySelector('[data-feedback-results]'));
                 } catch (error) {
                     console.error(error);
                 }
