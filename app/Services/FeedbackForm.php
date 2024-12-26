@@ -77,7 +77,7 @@ class FeedbackForm {
 	 */
 	public function submit_form(): void {
 		// Check nonce for security
-		check_ajax_referer( 'feedback_form_nonce', 'nonce' );
+		check_ajax_referer( 'wlc_feedback_form_nonce', 'nonce' );
 
 		// Check honeypot field
 		if ( ! empty( $_POST['honeypot'] ) ) {

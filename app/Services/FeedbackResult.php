@@ -57,31 +57,31 @@ class FeedbackResult {
 		global $wpdb;
 		$table_name = $wpdb->prefix . 'feedback_forms';
 
-		if ( isset( $_POST['id'] ) ) {
-			$id     = intval( $_POST['id'] );
-			$result = $wpdb->get_row( $wpdb->prepare( "SELECT * FROM $table_name WHERE id = %d", $id ) );
+        if ( isset( $_POST['id'] ) ) {
+            $id = intval( sanitize_text_field( $_POST['id'] ) );
+            $result = $wpdb->get_row( $wpdb->prepare( "SELECT * FROM $table_name WHERE id = %d", $id ) );
 
-			if ( $result ) {
-				wp_send_json_success( [ 'result' => $result ] );
-			} else {
-				wp_send_json_error( [ 'message' => __( 'No result found', 'wlc' ) ] );
-			}
-		} else {
-			$page     = isset( $_POST['page'] ) ? intval( $_POST['page'] ) : 1;
-			$per_page = 10;
-			$offset   = ( $page - 1 ) * $per_page;
+            if ( $result ) {
+                wp_send_json_success( [ 'result' => $result ] );
+            } else {
+                wp_send_json_error( [ 'message' => __( 'No result found', 'wlc' ) ] );
+            }
+        } else {
+            $page = isset( $_POST['page'] ) ? intval( sanitize_text_field( $_POST['page'] ) ) : 1;
+            $per_page = 10;
+            $offset = ( $page - 1 ) * $per_page;
 
-			// Get the total number of results
-			$total_results = $wpdb->get_var( "SELECT COUNT(*) FROM $table_name" );
+            // Get the total number of results
+            $total_results = $wpdb->get_var( "SELECT COUNT(*) FROM $table_name" );
 
-			// Get the paginated results sorted by newest first
-			$results = $wpdb->get_results( $wpdb->prepare(
-				"SELECT * FROM $table_name ORDER BY created_at DESC LIMIT %d OFFSET %d",
-				$per_page, $offset
-			) );
+            // Get the paginated results sorted by newest first
+            $results = $wpdb->get_results( $wpdb->prepare(
+                "SELECT * FROM $table_name ORDER BY created_at DESC LIMIT %d OFFSET %d",
+                $per_page, $offset
+            ) );
 
-			wp_send_json_success( [ 'results' => $results, 'total_results' => $total_results ] );
-		}
+            wp_send_json_success( [ 'results' => $results, 'total_results' => $total_results ] );
+        }
 	}
 
 
